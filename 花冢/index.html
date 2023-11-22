@@ -1,0 +1,2656 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="用于个人学习和测试">
+      
+      
+      
+      
+        <link rel="prev" href="../%E6%97%A5%E8%AE%B0/">
+      
+      
+        <link rel="next" href="../%E6%B2%99%E6%BB%A9/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>花冢 - 小K的mkdocs手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="小K的mkdocs手册" class="md-header__button md-logo" aria-label="小K的mkdocs手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            小K的mkdocs手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              花冢
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tag/" class="md-tabs__link">
+        
+  
+    
+  
+  tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../mkdocs%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+          
+  
+  Basic
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%95%B0%E5%AD%A6/" class="md-tabs__link">
+          
+  
+  Test
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E9%81%97%E5%BF%98/" class="md-tabs__link">
+          
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E6%97%A5%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  备忘录
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%9D%91%E4%B8%8A%E6%98%A5%E6%A8%B9/" class="md-tabs__link">
+          
+  
+  2023书影音
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../test/" class="md-tabs__link">
+          
+  
+  2024书影音
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="小K的mkdocs手册" class="md-nav__button md-logo" aria-label="小K的mkdocs手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    小K的mkdocs手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    markdown笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    终端命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A5%BD%E8%80%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    好耶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    English
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            English
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%81%97%E5%BF%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遗忘
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    备忘录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            备忘录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    日记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    花冢
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%B2%99%E6%BB%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    沙滩
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E5%AE%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其它
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2023书影音
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            2023书影音
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9D%91%E4%B8%8A%E6%98%A5%E6%A8%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    村上春樹
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9F%84%E8%B0%B7%E8%A1%8C%E4%BA%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    柄谷行人
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psychological/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    psychological
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    movies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            movies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%83%97%E3%83%AC%E3%82%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    风中有朵雨做的云
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%A6%E5%A0%B4%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%BC%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    圣诞快乐，劳伦斯先生
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%81%B5%E3%81%9F%E3%82%8A%E3%81%AE%E4%BA%BA%E9%AD%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    苏州河
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%B0%E5%81%87%E9%9D%A2%E9%AA%91%E5%A3%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    新假面骑士
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%9C%98%E8%9B%9B%E4%BE%A0%E5%A4%9A%E5%85%83%E5%AE%87%E5%AE%992/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蜘蛛侠多元宇宙2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9D%92%E3%83%96%E3%82%BF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    青ブタ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%90%9B%E3%81%9F%E3%81%A1%E3%81%AF%E3%81%A9%E3%81%86%E7%94%9F%E3%81%8D%E3%82%8B%E3%81%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    君たちはどう生きるか
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%8A%B1%E6%A0%B7%E5%B9%B4%E5%8D%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    花样年华
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    霸王别姬
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2024书影音
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            2024书影音
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    movies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            movies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>花冢</h1>
+
+<p>《花冢》
+克林斯·布鲁克斯说，诗的功能之一就是使我们成为更好的公民。</p>
+<p>假象
+粉红的花已经开过
+国王躺在草地上
+把影子投上去的路人最后
+都被枪杀了
+打开窗户可以看到海
+或者昨天的雨
+但大多数时候
+是躺着的国王</p>
+<p>网
+入夜，灯火在
+嬉笑
+世界倒扣下来
+床上
+浮着你的书包
+童年
+在断网的时候
+爬回
+悄悄陪你入睡</p>
+<p>冬天
+所有的雪都来自一场微雕
+要把脸贴的足够近
+才能感到
+不管什么温度的忧伤
+都是水</p>
+<p>活着
+唯心地活着
+等一株卷柏在心中生长
+烈焰焚毁索多玛之前
+每一个生者都在做爱
+推倒石像
+背叛口号
+逃离史诗
+对每一匹路过的骏马
+俯首称臣
+提着长枪的新娘
+刺穿我的胸膛</p>
+<p>当代生活
+坐在椅子扶手上看手机的时候
+会遇到蟑螂
+你看它的时候
+它会看你</p>
+<p>友谊
+掰成瓣掉落的雨
+拥挤的建筑群
+飞鸟
+站在不同的地方
+同一把红纸扇
+轻轻转动</p>
+<p>等待
+红色的雨在空中
+翻滚，灼烧
+大地给出每一年
+崭新的预言
+春草，暑热
+秋蝉，冬雪
+你仍在远方徘徊
+风把你打开
+南下，北上
+西行，东游
+蓝色的雨在空中
+呢喃，祈祷
+时间细细碎碎
+滴滴答答
+所有的珍珠都在酝酿
+一场花开
+我投出我
+最后的呐喊
+黑色的雨从空中
+把夜幕拉下来</p>
+<p>当代生活2
+起夜打开马桶盖的时候
+会看见溺毙的蟑螂
+被冲走的时候还是
+六脚朝天</p>
+<p>谎言
+人呵
+你凭一时的感情说着
+永远</p>
+<p>仰望
+当神话被枪决以后
+星星都会变成灯火</p>
+<p>你听着远方的战歌
+跨过奔腾的河
+你打败所有的六臂巨人
+祭祀自己的神
+你躺在战场的中央
+目击倾斜的天堂</p>
+<p>当神话被枪决以后
+星星都会变成挂坠</p>
+<p>你会成为多余的点缀
+背叛大陆 仰望另一个大陆
+当天空倒扣下来的时候
+流星成为凶器
+你的坟墓被萤火虫包围
+和主以同一频率闪烁
+满天开着平凡无奇的白花</p>
+<p>英雄怎么样诞生
+草在风声中倒下
+匍匐，与性命纠缠
+国王的铁骑踏过所有的恐惧
+草在践踏中倒下
+哀求，为例外祈祷
+捡起被风吹散的骨头
+抖擞曾被践踏的身躯
+把心脏悬挂在大旗之上
+在草之海的中央
+吹起英雄的口哨
+为所有一片的灰绿色
+以及自己开战的人
+心中充满着无畏的恐惧</p>
+<p>今天
+你枪毙了二十一世纪
+饮下腐质的爱情
+醉死在
+八十年代的诗歌里</p>
+<p>今天
+你拒绝把机动车
+称为行具
+跨上最后一匹烈马
+忙着拯救草原绿地</p>
+<p>今天
+你从机遇的海洋
+有幸生还
+岸边上守着
+一无是处的幸福
+和久违的自己</p>
+<p>今天
+你和众神举杯言笑
+俯瞰跳动的生活
+在死亡里舞蹈
+每一颗尘埃
+都是洒落的酒</p>
+<p>今天
+你把故乡装在行囊
+叠起童年的诗
+与未来赤手相搏
+难解难分</p>
+<p>N
+这座城市又失眠了
+你从它的身旁路过的每一步
+被每一盏灯火留下
+夜深以后还会有人
+勉强的微笑
+还会有人醉吐在
+自转的轨道
+连灯盏都休息以后
+欲望都熄火了
+马路会忘记你
+在它的哪一段身体上攀缘
+爱会忘记
+在它的旅馆里招待过哪些
+匆忙的过客
+城市是一种谎言
+有些人贩卖灵魂
+有些人走私幸福
+而我向你推销自己
+人们把压缩的孤独随身携带
+三角形，矩形，菱形
+陌生人，陌生人，陌生人
+而你是圆形
+我在城市虚拟的中央
+风从此处分发向世界各处
+推动时间流动
+我在城市虚拟的中央
+人从此处奔走向世界各处
+推动历史流动
+我在城市虚拟的中央
+光从各处向此收缩
+因此 当一切
+开始，发展，结束的时候
+我还会依然记得你</p>
+<p>bling
+夜色笼罩，我把幸存的星星
+安稳地挂在衣钩
+灯火将息，没有孩子玩得太晚
+我还在工作
+加工一些流窜的光
+这样你来的时候 星河浩荡</p>
+<p>左前方
+你走在我的左前方
+云像海鸥一样悠闲的盘旋
+口哨在打滚儿
+南太平洋
+小孩子跳起身够屋檐
+礼拜天，樱花都落了
+堵车 行人像空灵的水流
+缺了一小口掉在地上的棉花糖
+柳絮丢了东西，满城地找
+月近月远，潮起潮落
+空着一道题的作业
+想了一个多小时
+惦记睡的感觉而失眠
+你走在我的左前方</p>
+<p>所谓遥远
+就是触手可及之外的一点点</p>
+<p>起源
+最初的时候
+人们都需要被告知怎样生活
+滚石从天上下来
+血化为霖
+树木包围树木
+像宇宙包围着你
+光是一种幌子
+上世纪的借口
+神发怒的时候
+折断海鸥的羽毛
+就像你咬断一根铅笔
+光是
+一种幻想，变调的挽歌
+盲人指引我们前进
+等星星都睡了
+你跌倒的时候才发现
+夜色笼罩
+像深色的海嘲笑
+翻船的渔夫
+等光完成星际旅行
+重新回来的时候
+它会是一柄
+温柔的利刃
+我知道他们会在金属的甬道
+会在茫茫的雪地
+一直征战到
+你的家乡
+可是你坐起身来说
+不，飞鸟拒绝
+羽翼，海拒绝水
+奔马拒绝草原
+正如生拒绝永生
+利刃拥抱爱
+你沐浴光</p>
+<p>寒冬
+我们忙着把所有的十二月推倒重来
+向破碎的天空发射雪片
+失去雪人以后
+你失去所有的朋友
+我们拒绝把僵直的枝干称为冬天
+太阳下落的时候
+我们用兜网打捞它的碎屑
+抢救水中的旧年
+你站在钟塔顶上向我宣布
+世界是一个谎言</p>
+<p>局部
+我们是悬在天地间
+漂浮的岛
+在所有其他人的故乡流浪
+从我们的身上长出
+原生的诗歌与梦
+轻盈的城市和不成熟的美
+大海通过我们完成祈祷
+我听见一个深渊
+在我背上叹息的声音</p>
+<p>去看活动
+偶然看到一个活动的广告
+坐公交车去看它
+反正我也很无聊
+随便看看好了
+想去看它的人很多
+路都堵了，倒霉的司机
+慢慢地抽烟、叹气
+抽烟、叹气
+时间像烟雾</p>
+<p>去看活动的路上堵车了
+我只好听电台的歌
+以四分音符为一拍
+每小节有三拍
+大大大打打打</p>
+<p>灯都睡了，我才到了
+我还想去看活动
+听到巴士引擎启动
+看到镁光灯的凋谢
+负责人员返家
+幕布拉下的瞬间
+埋葬一场活动
+噗噜噜哗啦啦</p>
+<p>我想去看一场活动
+但我到的时候它已经结束了
+我没看到它怎样发生
+也不能确定它曾经发生
+我本来只想随便看看
+但回家的路上却很难过</p>
+<p>站在四楼的人所能看到的风景
+世界透过防撞灯
+隐约地闪烁
+在城市朦胧的醉眼里
+海的尽头
+天空是平铺的折纸
+一朵浪花拼写
+你的名字
+如果你捡到
+我丢失的乳名
+就把它埋在海边
+我在空中游泳
+说不定我会遇到
+我的墓碑
+说不定我会捡到
+你的名字
+世界对折天空的时候
+我还会帮你保存着
+灯火位于海中
+有的人正在燃烧
+有的人逐渐熄灭</p>
+<p>如果春天，一个旅人
+嗨！你干嘛不随便种点儿什么
+春天的时候
+小时候看过的一场烟火
+三年前死掉的雨云
+种一个野心家
+收获一个小孩子
+一两场很快就会好的病
+嗨！你干嘛不随便扔掉点儿什么
+给我啰啰嗦嗦的谎言
+满城繁花
+但是不要给我你的光阴
+我不能说我走过
+春天，一个巨大的shopping mall
+我老学不会爬树
+give me a job
+焚烧盛开的尸体
+重叠的孤独
+请允许我找一把小号
+鼓起腮帮子
+像一条业余的金鱼那样
+为你奏出一场花开
+行吟诗人满怀希望地
+看着路边的野狗
+看着很久、很久
+狗会觉得不好意思
+然后别过它的头</p>
+<p>广播
+六月是一场神话与梦的烟花
+爬上四楼的人更为接近天堂
+青春是一个幌子
+相遇是一瓶藏了18年的酒
+那分离呢，分离是
+一场落入海中的雨
+关灯以后，请你拿走
+忘在教室里的最后一本习题
+人们互相淹没
+记忆互相淹没
+我们随意遗忘，不意相遇
+爬山虎缠我看老天涯
+这以后省中是一段时间
+其中我们不断相见，不断重逢</p>
+<p>夏天会想到的故事
+喂，那边的小姑娘
+不买根冰棍儿么
+大夏天的
+一个人走在街上？
+这个时代
+只有我还在卖
+五毛钱的小布丁
+没有零钱？
+下次吧，我这儿可没有
+扫码之类
+快捷的支付啊
+不行不行，五毛钱也罢
+我还没有大方到
+把冰棍送给一面之交的女孩子
+请拿着那枚
+以假乱真的金币——
+放心吧，我会盖上厚厚的棉毯
+在这个小小的冰柜上
+在你重新到来之前
+总有些东西不肯轻易地融化</p>
+<p>心情不好的时候
+于是世界成为一片黑色的雨云
+你应该知道 人间没有奇迹
+向上攀升的雕像
+还不是斑斑锈迹
+天使使用何种语言？
+天堂占地多少平方
+看门狗，入场券
+只有审判，没有桃源
+？？？
+？心？
+？？？
+我是一个牢笼
+我应该知道
+没人为善恶公平地打分
+迷雾笼罩
+一切旁若无人地发生 ​​​</p>
+<p>小学一年级生写给摄像头的一封信
+嘿，摄像头，大傻帽儿
+我想看看你的眼睛
+什么时候，你会流泪？
+你会闭上双眼，说
+啊，景色真美
+那时，请允许我
+在你的眼皮底下
+犯一些无伤大雅的小罪
+骑走一头独角兽
+给地球一个轻吻
+可是你别睁眼
+睁开眼的时候
+人们很难看见真实</p>
+<p>星空
+我还有很多的梦想
+就像很久以前
+每个夜晚的鼓面上
+都缀着银色的铃铛
+活着，那就是说
+满天摇动的梦
+叮当作响</p>
+<p>生日
+我献给你
+玫瑰心头上的火焰
+无人涉足的海
+请容我找一把小号
+为你吹奏出
+一场花开</p>
+<p>从今散似雪絮去，
+终有生根叶茂时</p>
+<p>歇斯底里
+所爱的被欲望支配
+互相投掷
+压力的长矛
+所恨的
+彬彬有礼
+敬而远之
+形同虚设
+所爱的
+互相接近
+因而
+互相征战
+所恨的 如云烟
+向上攀登的山峦
+切割天空
+包裹山峦的天空
+令其窒息
+大地 如云烟</p>
+<p>what is love
+问妈妈
+爱是什么
+给我一段故事
+问爸爸
+爱是什么
+给我一个巴掌
+问小朋友
+爱是什么
+答曰：爱是爱呀
+问Siri
+爱是什么
+答曰：无法回答
+问你，爱是什么
+答曰：冗談です</p>
+<p>在人们的视线中
+夕阳缓缓地坍塌</p>
+<p>这个年代
+这个年代 山
+是弯曲的
+黄河在天空奔腾
+人们把你的家称为
+他们的家
+这个年代 墓碑
+如折纸
+日历颠倒地翻动
+一只被子弹击中的白蝴蝶
+这个年代 滤镜
+是行动电话的眼睛
+我们努力地去看
+但事物的真实
+全都靠猜</p>
+<p>一觉醒来什么也不会变
+时间把你上了膛
+朝未来开了一枪</p>
+<p>止痛秘方
+18岁，你遇上伤病或疼痛
+总想着快点睡上一觉
+拥抱一个焕然一新的黎明
+有一天，你心中疼痛
+想着快点睡上一觉
+睡醒以后会发现
+这个秘方失了效</p>
+<p>蛙声池塘一片月
+蛙声一片池塘月
+池塘蛙声一片月
+一片蛙声月池塘</p>
+<p>你说不管什么事情都要趁早干了因为再过八年十年谁还管你爱不爱呢</p>
+<div class="highlight"><pre><span></span><code>失窃案
+</code></pre></div>
+<p>今天我心里失了窃
+没有保险金没有痕迹也没有
+证人
+我知道对谁起诉
+但我没有
+那是一小笔
+不流通的回忆
+不值一提的收藏
+如果你喜欢
+请你一直把它带在身边
+（三天以后）
+我在路边捡回了它</p>
+<p>那里空荡荡的什么也没有
+黑色的蚂蚁舔舐着黑色的夜
+有些人活着
+有些人死去
+就像所有的人活着
+和所有人死去
+太阳，是光的墓地</p>
+<p>酸歌
+夜有多深 弥漫一生
+爱一个人要用几分单纯。
+我还会等 我还在等
+你走后才有空整理伤痕。</p>
+<p>距离感
+如果一棵树会走
+他将以怎样的姿势
+拥抱身边的树
+石头以长久的凝视
+在三步开外的石头上
+留下吻痕
+海在尽头与天空牵着手
+一个人关上家门
+灯火的网隔着
+跋山涉水赶来的星光
+地图上有许多钉子
+只有对折地图
+它们才能碰到一起</p>
+<p>流星是巨人的眼泪
+被人们称为光的
+首先是火
+最后是烟</p>
+<p>盜將行歌詞改
+輕騎一路向北 江南逝水難追
+看那煙塵滿山遍野
+但昂首舉酒杯
+秋風忍把花摧 歧路中不成悲
+雖是星光黯淡的夜
+我鮮衣怒馬別</p>
+<p>寒窗戰伐多年 未得朱衣點頭</p>
+<p>我在天台抽根烟
+城市是半只飞鸟
+参差的凝固的羽毛
+以那个下坠的小女孩看来
+城市在不断的上升
+上升
+上升
+大张的喙衔着
+人与尘埃
+哦，夜晚跳蚤点起灯
+照着细菌和梦
+烟草丝和我的头发
+一个呐喊、一个沉默
+我躺在死亡边上
+呼出我的灵魂
+尼古丁和情绪都不能过量
+风是一声叹息
+请我旁边的姑娘抽一根烟
+然后我们各自下楼
+回家
+关好房门</p>
+<p>我千杯图一醉啊 趔趄赴京华
+行囊压行囊 旧梦叠旧梦
+我一骑绝烟尘啊 回首不见家
+匆匆赶忙忙 酒化朦胧泪
+我一路奔向北啊 逝水没得追
+要天各一方 先道声再会</p>
+<p>等待
+妈妈
+今天约好的小伙伴
+还没有来吗
+现在呢？
+现在呢？
+那现在呢？
+现在呢</p>
+<p>读诗小记
+我看见好多的诗歌
+我看见颠颠倒倒的文字
+看见韵脚压着
+某个人的生活
+一个人把骨头拆得零零散散
+然后笔画一声不响的堆叠
+你踏过一个段落
+时光从早晨
+游游荡荡了一个傍晚
+这一场雨下完
+我又结束了一首
+无人问津的诗歌
+亲手结束它
+蹦蹦跳跳的生命
+有一些模糊的呐喊
+一些请求
+当我离开他们的时候
+我将完全不会想起</p>
+<p>放假
+有一天我们应该去认识
+每一棵树，每一只鸟的名字
+每一条河流，他们会流向何处
+每一个人
+他们和他们的梦
+夜晚将寄居在何处
+抛下我，你们应该去认识
+抛下笔和絮语
+去一条马路的尽头
+找一条奄奄一息的
+河流
+抛下房屋，大厦
+抛下弹头
+把自己向天空发射
+命中一朵
+行色匆忙的云
+然后春天里下起雪来
+我们应该明白
+模糊的并不柔软
+雪以自己的棱角轰炸大地</p>
+<p>标题不是非取不可
+我们就这么散漫地走在大街上
+有一个小孩子向我们投掷他的石子
+喔，我们都没有什么非做不可的事
+没有什么
+非做不可的事
+我们有家，但不常回去
+拿着一个硬币
+拿着一两个流浪者的性命
+我们都没有什么非做不可的事
+有一个人，在大巴上呕吐
+他是喝醉了，还是晕了车
+他好像也没有
+非去不可的地方
+那两个把他抬走的人
+与他素不相识
+是谁说善恶是两元的
+是南北
+他被扔在土地上的时候
+土地没有审判
+它不过只是厌恶
+非呆在原地不可的土地
+有人打开一扇窗户
+弹走所有的阳光
+但是死皮赖脸的阳光依旧
+在她的房间里
+她没有非把它赶走的道理
+而那个人一直躺在地上
+在疼痛还没结束的时候
+呼呼大睡
+只是因为他还没有
+没去不可的地方
+我们就这么散漫地走在大街上
+把阳光踢来踢去
+喔，今天好像是一个节日
+人们都没有什么非去不可的地方
+但他们总是把我们
+踢来踢去</p>
+<p>保险箱
+这几天我老是梦不到你
+我想我已经把你
+藏在了谁也够不到的地方</p>
+<p>我从南方来
+你说你要走的越远越好
+结果我在北方
+你在家乡</p>
+<p>旅行
+季风在海面上匆忙地穿行
+但愿它带着所有的神话、眼泪、离别
+带着白帆的梦与爱情，吹向你</p>
+<p>动物园
+上帝把我关在身体的牢笼里
+人们像看动物那样，兜兜转转
+只有你不停地敲着我的笼门</p>
+<p>情绪邮递
+我在海边给你写长长的信
+请留意最近的天气，第一场雨落下的刹那
+大地是一页铺陈的情书</p>
+<p>演唱会
+我一个人去听演唱会，好奇
+那个歌手为什么老唱我心里的歌
+不厌其烦地呼唤音调不同的你啊</p>
+<p>爱情及其他魔鬼
+回到故乡
+我在等待你
+一如等待死亡</p>
+<p>就像往破了底的水瓶中
+坚持倒水</p>
+<p>我想仅为了什么人而歌唱
+抓住一两只蹦蹦跳跳的
+虱子般的疲劳
+我想仅仅为了什么人而唱歌
+比如用时针和分针指挥时间
+观众席上铺着阳光织成的毯子
+厚厚的，软软的，让人想起一个好梦
+一颗抽象的心脏
+大家都听过这首歌
+却没人记得它的名字
+我想仅仅为了什么人
+唱一首那样的歌
+在沉静的世界中
+大家都知道曾经
+曾经有过这么一首歌
+每个人都记得它的一些片段
+断断续续的，破了一半的枕头
+漏出来的羽毛
+我想仅仅为了什么人
+把枕头缝好
+在沉静的世界中
+应当有一些音符作为地标
+即使我五音不全
+气息跌跌撞撞
+你也将能够知道
+去哪里找到我
+去哪里做一个好梦
+因为我将仅仅为了你而歌唱
+入场券也只发售了
+那么一张</p>
+<p>我在一条以你为名的河流中
+我在一条，以你为名的河流中
+世界是流动的碎片
+时间是河岸
+人们打捞我
+打捞我的生活
+如果人们真想找到我
+请他们首先找到你
+请他们首先找到一条
+透明的河流
+往事如彩色的卵石
+压着轻浮的河底
+我是说，你好像即将奔流而去
+如果缺少这些镇纸
+我将在干枯的河底
+沦为没有故乡的鱼
+我是说
+我在以你为名的河里
+感谢折光
+看那些乱七八糟的路牌
+哪一个不指向你流淌的方向
+人们沿着河岸盖起房子
+停在此处
+你终将向他们告别
+他们向你要求，却不跟随
+你终将浸透无数的告别
+无数的告别也将浸透我
+因为我在以你为名的河流中
+只有我明白
+你的身体是你泪水的伪装
+人们打捞、洗涤，然后离开
+而我是植物
+人们把他们的目光、语言
+投入你的河中
+而我知道，那是无法触及河底的
+廉价塑料
+我是以那些塑料为食的生物
+搭着你的顺风车
+我不知道你要不要去大海
+因为我过于渺小
+对于我来说
+以你为名的河流
+就是一条苗条的海</p>
+<p>初雪下过了吧
+我没有见，也好
+所谓的喜欢不就是
+被雪堆埋起来的大地
+比你到处遇到的冷空气
+至少来的温暖</p>
+<p>初雪下过了吧
+我没有见，也好
+至少你会知道
+被雪堆埋起来的大地
+比你到处遇到的轻浮雪花
+要来的温暖，并且长久</p>
+<p>北方（一）
+12月，北京没有一位雪来
+那个穿着匡威all star的女孩
+还裸着她的脚踝
+大风在所有地方游荡
+却没有一个定居的窝
+人们裹着他们的大衣
+裹着腹语， 颤抖的灵魂
+拥挤的街上只有
+树枝摇头的嘘声
+风依赖所有的颤抖生存
+温暖仅限于
+房屋可以拥抱的范围
+暖气是一条缰绳
+标语是栏杆
+人们在那之内的范围行走
+我再未见过，那个翻过栏杆呐喊的人
+安静是每天轰炸街道的武器
+然后由流行歌曲来埋葬
+那些没有裹着大衣的人
+人们从他们身边走过
+扯着外套
+都想把世界扯到自己这边</p>
+<p>北方（二）
+我总是在沉寂下去的时候
+听见那只乌鸦的叫声
+就好像它不满意
+人间的不连续性
+以及十二月的冷空气</p>
+<p>我走到它身边而不飞开的
+全世界就只有这一只麻雀
+但我已经走过了它
+我将把它混同于其他所有麻雀</p>
+<p>我花了好长时间才认出来
+那只不肯暴露姓名的灰喜鹊
+我认得它的羽毛 认得它如何起飞
+认得灰色和蓝色
+但我不知道 人们管它叫灰喜鹊</p>
+<p>就像我在不同的场合
+都听过那只乌鸦发出
+和我同样的笑声
+但却哪儿都没瞧见他</p>
+<p>北方（三）
+把夜晚浓稠的寂寞
+挤一点在明天要用的墨水瓶里
+这里特别干燥
+北风的巨手提着
+每一滴水的灵魂
+人们从荒野上开凿了四通八达的井
+在所有的梦蒸发以后
+健忘的后代把它们称为胡同
+我约好了要去找你
+跨过梦痕和水的尸骸
+满月的时候
+不管我如何小心
+影子都把我的秘密写成了信
+有一个后现代主义者说
+人的身体销金熟谷
+现在北风提着我
+丢在星星旁边
+我才意识到
+它们都是夜晚独具匠心的留白
+空荡荡的内心
+照耀着人间</p>
+<p>吊灯
+我被无望的生活
+钉在颠倒的地面上
+看那个低头玩手机的人
+他不知道就在刚才
+有一头
+角上挂着星星的鹿
+隔着窗户看他
+就像，看一株植物
+攀附着我的光明
+都稀里哗啦地
+淌在地上
+流到地下
+那么下一步
+就要练习在黑暗里游泳
+在人间的不公正还未震动大地的当口
+所有的花都像我一样
+轻轻摇动</p>
+<p>人们一日三次
+用大火翻炒自己的梦想
+翻来炒去
+炒去
+翻来</p>
+<p>我看看
+怎么真理的书上
+一个字也没有写</p>
+<p>不管在哪里
+都不是在人间</p>
+<p>因为我们活着都是一种不可避免的偶然</p>
+<p>惦记的事情在心上
+喜欢的人在远方</p>
+<p>伟大思想菜市场</p>
+<p>宏大叙事
+共享单车上
+别了一把锁</p>
+<p>高铁擦除了所有的故事
+在横贯中国的轨道上
+邂逅总是跑得太慢</p>
+<p>星星们也都累了
+它们闭上眼睛以后
+留给人间的只剩下沉甸甸的黑暗</p>
+<p>人们都很聪明
+永恒的盘子打碎了
+也没有人去拾他的碎片</p>
+<p>最近
+你问我在干嘛
+我在忙着活着</p>
+<p>刻板印象
+我们忙着枪杀那只黑色的猫
+在白猫和白鸽子的广场上
+有些动物是动物
+有些动物是食物
+我高举我的身份证
+完成了一个证明的公式
+我们应该在结束之后审判
+先把子弹请出来
+再说：开火
+最后才转过头说：应当开火
+我们把每条街道名为
+天堂1号
+天堂2号
+这样我们凭借伟大的努力
+终于来到了天堂
+广场的大屏幕上
+一会儿是黑色
+一会儿是白色
+所以广场上
+一阵子活着黑猫
+一阵子活着白猫
+有些人类是人类
+有些人类是靶子</p>
+<p>记录一次现代人的讲话
+这样（（（
+啊啊是这样啊）））
+f我是说（x）=我不是说
+哈(<em>ﾟ▽ﾟ</em>)
+【插入图片1】
+嗯
+哈哈
+1
+！
+ああそうですね</p>
+<p>一则消息
+告诉她，去虞山北路
+说不定会找到
+我埋在那里的
+最后一颗星星
+不，不是一颗臃肿的星球
+是我从梦中挽救回来的
+小小的光
+醒来以后，现实需要销毁
+每一页小说，每一头羚羊
+现实把光攥在自己这边
+像一台坏了的碎纸机那样
+把闪光的碎屑撒往人间
+但要告诉她，她不必穿越人潮
+不必经历争夺、怀疑和死亡
+告诉她，去虞山北路
+但不要惊扰这个城市
+搬运其他人的生活
+运气坏的话
+还要过一道安检
+上交她所有的武装
+包括放大镜、小刀
+书包和一本太厚的字典
+一本无聊的小说
+常熟没有安检
+那个安检是我设的
+是我私自设的
+后面除了一颗奄奄一息的星星
+其他大概什么也没有</p>
+<p>乡村与谋杀案
+农民举起小刀
+刺向大地的后背
+不知情的人
+把伤痕称为诗歌
+无梦的黑夜分娩了
+一只野猫
+人们把尸体的种子
+埋入土地
+让黑暗消化黑暗
+人们随同作物
+生长、死亡</p>
+<div class="highlight"><pre><span></span><code>               六月
+ 天平上停着一只蜻蜓
+          花如瀑布
+     咖啡豆粉身碎骨
+</code></pre></div>
+<p>你披着海浪慢慢在太阳下睡着</p>
+<p>我们习惯用错证明错
+在遗忘的塔里生活</p>
+<p>相机下我们每个人都很美丽</p>
+<p>￼</p>
+<p>想了一下，Emily Dickinson的格式可能是这样
+I ———
+Wander the chance of me
+passing by the haunt
+without  thinking of
+You ———</p>
+<p>那个人从不抽烟
+他说他讨厌烟味
+他口袋里总揣着一包软中华
+每次遇到男性，就问他们
+大哥，抽烟吗</p>
+<p>文学是人在现实世界吊死之前
+剪断绳索的剪刀</p>
+<p>十九岁
+我在遗忘的塔里生活
+一千次想起一瓶破碎的沙漏
+我没有观摩过人是如何被埋葬的
+一铲接连着一铲
+泥土 一件叠盖着
+一件衣服，十八岁的时候一言未发
+年华开垦了我</p>
+<p>波浪写作人人人人
+从十七岁跳到十九岁
+不能阻止任何一场灌溉
+发生</p>
+<p>眼泪把你溶解在水中
+每一条鲤鱼都必须游向大陆
+在他们带我去教堂的路上
+我提前成为一个有罪的人
+每一条鲤鱼都必须游向大陆</p>
+<p>十八岁是拿在别人手中的网
+十九岁是漏剩下的鳞片</p>
+<p>我把自己嵌在硬币上
+只在小范围内流通
+那些持有我的人们
+永不谈论汇率或通胀</p>
+<p>因为不小心把滤镜用丢了
+手机将无法成为一台相机
+无论如何聚焦、剪裁
+无论如何将模特呼来喝去
+因为不小心把滤镜弄丢了
+人们将不再珍惜
+走到哪里都带着的手机
+他们威胁它
+他们淘汰它</p>
+<p>我在遗忘的塔里生活
+不管是否有人在密西西比写作
+或者在可可西里屠杀
+我都小心地
+不使自己在冰箱里融化</p>
+<p>他们把那个走投无路的人
+关进了比塞特尔
+定义了谵妄的医生们
+习惯性地打量着我</p>
+<p>因为不小心把导航弄丢了
+那辆破破烂烂的汽车
+将无法与卫星通信
+无论如何鸣笛、呼喊
+无论如何转向或打听
+因为不小心把导航弄丢了
+人们将不再接近
+人们会说
+它不明白自己占用了
+非机动车道</p>
+<p>我把自己印在纸币上
+任何一个前来兑换的人
+都将得到一种注视
+任何一个没有逃离的人
+都将得到一块柔软的
+红色的玻璃</p>
+<p>通过它他们可以知道
+光阴开垦了我
+而我在遗忘的塔里生活</p>
+<p>失去了田的农民们</p>
+<p>谢谢大家
+他拿起演讲稿
+地上的砖是灰色黄色
+红色
+他拿起演讲稿
+马扎挂在你的手上，左！
+说！说！说！
+他拿起演讲稿
+你不知道所有的树
+的姓氏
+香樟，不够伟大！云衫，不够伟大！
+梧桐，不够伟大！银杏，不够伟大！
+但所有的树都有一个名字
+她拿起演讲稿
+Every woman adores a fascist
+每一座没有雨的城市
+人们都选择赞美太阳
+每一棵树都必须忘记他们的姓氏
+忘记生长和舞动忘记河流忘记山川
+忘记鸟鸣和一座巢忘记一片蜘蛛网
+忘记雾忘记雨忘记
+服从修剪服从电锯或铲车
+服从一片大地的名字
+服从活着服从
+我有不得不做的事情
+他说
+一棵沙棘在生长
+但他把它称为树</p>
+<p>太阳必须从北方升起
+第二天 太阳必须升起
+我们都要去追赶那只羚羊
+每一个方向都安排了
+一连向日葵 
+而北方
+北方交给了太阳
+最后一头羚羊必须以这个角度
+死亡
+我们在血液里搜寻 围捕 直到
+血液燃烧 太阳 燃烧
+我们把心脏架设在胸膛
+的正中央
+卧倒的时候 南方正在下雪
+而太阳在北方
+向日葵在北方生长 爬行 吞食
+关掉电灯 关掉手机 关掉
+南方
+瞄准的一切准备
+除了闭上左眼 还需要闭上心脏
+血液沸腾
+万物鸣响
+而我们正在追赶最后一头羚羊
+太阳必须从北方升起
+向日葵必须踏过迷路了的
+向日葵
+我们必须以血液蒸发南方
+蒸发南方的雪
+血液沸腾
+羚羊哀嚎
+曾经有一百种声音
+但现在只有枪声
+枪声巨大</p>
+<p>大风
+你还没有来
+我的身子都晾干了
+心脏在原野上起落
+起落</p>
+<p>我们迫不及待地告诉
+我们把旗帜插上土地</p>
+<p>冬天往树林里开了一枪
+有的鸟飞走了
+有的鸟死掉了</p>
+<p>冬天像一只刻薄的狗</p>
+<p>世界是一片巨大冰冷的海洋
+明天的我推翻今天的我
+可你依旧</p>
+<p>我希望有一个人爱我
+我希望有一个人爱我
+不被上下的打量
+不被来回的测算</p>
+<p>我希望有一个人爱我
+与公分无关
+与货币无关</p>
+<p>我希望有一个人爱我
+不因为我在尘世占有着什么
+不因为我死后能留下些什么</p>
+<p>我希望有一个人爱我
+因为我是海底的灯笼
+浪花尖的水晶
+而她恰好住在海边</p>
+<p>我希望有一个人爱我
+因为阳光照在平原
+风吹过深谷
+而我们都厌倦了城市</p>
+<p>我希望有一个人爱我
+理由是 她爱我</p>
+<p>世界在我的眼前和身后
+但就是不在我手边</p>
+<p>交出他的尸体作为我爱你的证明</p>
+<div class="highlight"><pre><span></span><code>     中国
+</code></pre></div>
+<p>欢迎来我的房间
+这里有switch ps5 和其他一切设备
+哦对了
+绝对不要向衣柜里看上一眼</p>
+<p>怀抱心中的火焰
+它将灼烧你灼烧爱和一切
+但不要将它丢弃 也不要将其熄灭
+那只是我们的另一种形态的血肉
+是至纯的我们自己
+而自由是氧气</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
