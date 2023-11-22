@@ -1,0 +1,103 @@
+site_name: 小K的mkdocs手册
+
+site_description: '用于个人学习和测试'
+
+theme:
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  name: 'material'
+  features:
+    - navigation.tabs
+    - content.code.copy
+
+
+plugins:
+  - tags
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+
+nav:
+  - "index": index.md
+  
+  - "tag": tag.md
+
+  - 'Basic':
+     - "mkdocs入门": mkdocs入门.md
+     - "markdown笔记": markdown笔记.md
+     - "终端命令": 终端命令.md
+     - "python基础": python基础.md
+     - "git": git.md
+
+  - 'Test':
+    - "数学": 数学.md
+    - "编程": 编程.md
+    - "好耶": 好耶.md
+
+  - 'English':
+    - "遗忘": "遗忘.md"
+
+  - "备忘录": 
+    - "日记": '日记.md'
+    - "花冢": '花冢.md'
+    - "沙滩": '沙滩.md'
+    - "其它": '其它.md'
+
+  - '2023书影音':
+    - "books": 
+      - "村上春樹": '村上春樹.md'
+      - "柄谷行人": '柄谷行人.md'
+      - "psychological": 'psychological.md'
+    - "movies":
+      - "风中有朵雨做的云": シャドウプレイ.md
+      - "圣诞快乐，劳伦斯先生": 戦場のメリークリスマス.md
+      - "苏州河": ふたりの人魚.md
+      - "新假面骑士": 新假面骑士.md
+      - "蜘蛛侠多元宇宙2": 蜘蛛侠多元宇宙2.md
+      - "青ブタ": 青ブタ.md
+      - "君たちはどう生きるか": 君たちはどう生きるか.md
+      - "花样年华": 花样年华.md
+      - "霸王别姬": 霸王别姬.md
+      
+  
+  - '2024书影音':
+    - 'books':
+      - 'test': test.md
+    - "movies":
+      - 'test': test.md
+      
+
+  
+
+
+
+
+
+
+
