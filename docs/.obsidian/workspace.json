@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "a06070e492e9ccaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "cafaffe079081c42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79771694f32b8de9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "村上春樹.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a0d045157a1937f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d4d7e479c6fb925",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "970e92601688a522",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c0aa4a6e5941ce9e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "630cb83204c9eafd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ae908a54b6e3b548",
+    "type": "split",
+    "children": [
+      {
+        "id": "771543bc3970c949",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e77f55ba8a020ee5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "村上春樹.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cd798b6c1801b875",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "村上春樹.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9a723e1528aa564",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c6df58a3ce27de69",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "村上春樹.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "970e92601688a522",
+  "lastOpenFiles": [
+    "编程.md",
+    "村上春樹.md",
+    "村上春樹 1.md",
+    "好耶.md",
+    "新假面骑士.md",
+    "花冢.md",
+    "img/2月5日.jpg"
+  ]
+}
