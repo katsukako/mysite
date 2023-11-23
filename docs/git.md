@@ -80,11 +80,11 @@
 
 查看当前所有远程地址别名：
 
-`git remove -v`
+`git remote -v`
 
 起别名：
 
-`git remove add nickname remote_address`
+`git remote add nickname remote_address`
 
 推送：
 
@@ -98,6 +98,14 @@
 
 `git clone remote_address`
 
+???+ note "克隆"
+
+    克隆代码；初始化git；自动创建别名origin
+
 拉取且合并：
 
 `git pull remote_nickname remote_branch_name`
+
+mkdocs部署：
+
+首先管理github仓库，然后mkdocs gh-deploy -r mysite，注意只有公开仓库才能部署，否则开github pro
