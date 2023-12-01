@@ -94,6 +94,8 @@
 
     需要指定分支，换句话说最小单位是分支
 
+`git remote remove origin`
+
 克隆：
 
 `git clone remote_address`
@@ -106,6 +108,19 @@
 
 `git pull remote_nickname remote_branch_name`
 
+强制拉取合并：
+
+`git pull mysite main --allow-unrelated-histories`
+
 mkdocs部署：
 
 首先管理github仓库，然后mkdocs gh-deploy -r mysite，注意只有公开仓库才能部署，否则开github pro
+
+???+ warning "how_to_start"
+
+    如果你打算在 GitHub 上创建一个新的仓库并在本地工作，最好的做法是先在 GitHub 上创建一个空仓库（不要添加 README、.gitignore 或其他文件），然后克隆该仓库到本地，将你的工作添加进去，并推送回 GitHub。这样可以避免不同的提交历史导致的问题。
+
+
+
+
+
