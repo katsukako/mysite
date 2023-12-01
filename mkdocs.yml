@@ -52,7 +52,7 @@ nav:
      - "mkdocs入门": mkdocs入门.md
      - "markdown笔记": markdown笔记.md
      - "终端命令": 终端命令.md
-     - "python基础": python基础.md
+     - "python基础": pyhon_basic.md
      - "git": git.md
 
   - 'Test':
