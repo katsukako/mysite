@@ -1618,8 +1618,14 @@
 </details>
 <p>拉取且合并：</p>
 <p><code>git pull remote_nickname remote_branch_name</code></p>
+<p>强制拉取合并：</p>
+<p><code>git pull mysite main --allow-unrelated-histories</code></p>
 <p>mkdocs部署：</p>
 <p>首先管理github仓库，然后mkdocs gh-deploy -r mysite，注意只有公开仓库才能部署，否则开github pro</p>
+<details class="warning" open="open">
+<summary>how_to_start</summary>
+<p>如果你打算在 GitHub 上创建一个新的仓库并在本地工作，最好的做法是先在 GitHub 上创建一个空仓库（不要添加 README、.gitignore 或其他文件），然后克隆该仓库到本地，将你的工作添加进去，并推送回 GitHub。这样可以避免不同的提交历史导致的问题。</p>
+</details>
 
 
 
