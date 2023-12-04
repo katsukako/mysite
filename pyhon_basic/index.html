@@ -754,8 +754,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nested-dictionaries-and-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      nested dictionaries and lists
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6manipulating-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ６manipulating strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      string literals
+    </span>
+  </a>
   
 </li>
       
@@ -1793,8 +1820,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nested-dictionaries-and-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      nested dictionaries and lists
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6manipulating-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ６manipulating strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      string literals
+    </span>
+  </a>
   
 </li>
       
@@ -2041,7 +2095,7 @@ python可以用模组所以都规定好local可以方便</p>
 <p>slice list_name[0:4]  (从零到三，4不包括) function[:]</p>
 </li>
 <li>
-<p>len（list_name）</p>
+<p>len(list_name)</p>
 </li>
 <li>
 <p>del list_name[2]</p>
@@ -2201,7 +2255,7 @@ print(spam)
 <p>data deleted after running. ch.9 to learn how to save data</p>
 </li>
 <li>
-<p>method: keys() value() items()  tuple value can be used in for loops</p>
+<p>method: .keys() .value() .items()  tuple value can be used in for loops</p>
 </li>
 </ul>
 <details class="type" open="open">
@@ -2225,11 +2279,177 @@ red
 <li>
 <p>setdefault(key, default value) </p>
 </li>
-<li>
-<p>import pprint   pprint() pformat()</p>
-</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>spam.setdefault('color', 'black')
+这行代码的作用是：检查字典 spam 中是否有 'color' 这个键，如果没有，则将 'color' 键的值设置为 'black'。如果 'color' 已经存在于 spam 中，则 setdefault() 不做任何改变，并保留原来的值。</p>
+</div>
+<ul>
+<li>import pprint   pprint() pformat()</li>
 </ul>
 <h3 id="data-structure">data structure</h3>
+<ul>
+<li>基本上就是建模 画流程图分析 把实际问题转化为数学模型选择合适的数据结构去解决</li>
+</ul>
+<h3 id="nested-dictionaries-and-lists">nested dictionaries and lists</h3>
+<ul>
+<li>to contain ordered series of value</li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<div class="highlight"><pre><span></span><code>def totalBrought(guests, item): numBrought = 0
+    for k, v in guests.items():
+    numBrought = numBrought + v.get(item, 0)
+    return numBrought
+
+使用 .items() 可以遍历字典的键和值。
+使用 .get() 可以安全地访问字典中的特定键的值，并在该键不存在时返回一个默认值。
+</code></pre></div>
+</details>
+<h2 id="6manipulating-strings">６manipulating strings</h2>
+<h2 id="string-literals">string literals</h2>
+<ul>
+<li>" "   ''  "" if ' is included</li>
+</ul>
+<p><strong>escape characters</strong> ：\ </p>
+<p><code>spam = 'Say hi to Bob\'s mother.'</code></p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>\'
+\"
+\t
+\n
+\</p>
+</details>
+<p><strong>raw string</strong> :r    对打印路径很实用</p>
+<p><code>&gt;&gt;&gt; print(r'That is Carol\'s cat.') That is Carol\'s cat.</code></p>
+<p><strong>triple quotes</strong>：<code>multiline</code></p>
+<p><strong>multiline comments</strong>: """ """</p>
+<p><strong>indexing and slicing strings</strong>: spam[7:]  spam[:5]</p>
+<p><strong>string interpolation</strong> : /%s</p>
+<p><code>'My name is %s. I am %s years old.' % (name, age)</code></p>
+<p><strong>f-strings</strong>: {parameter}</p>
+<p><code>f'My name is {name}. Next year I will be {age + 1}.'</code></p>
+<p><strong>string method</strong>: return new string value</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">to</span> <span class="n">handle</span> <span class="nb">input</span> <span class="n">problems</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">method</span><span class="p">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">stringName</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;How are you?&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">feeling</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">if</span> <span class="n">feeling</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;great&#39;</span><span class="p">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I feel great too.&#39;</span><span class="p">)</span> 
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I hope the rest of your day is good.&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="s1">&#39;HELLO&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="kc">True</span>
+</code></pre></div>
+<p><strong>the isX() methods</strong>: helpful to valid users's input</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">isalpha</span><span class="p">()</span>  <span class="n">whether</span> <span class="n">only</span> <span class="n">letters</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">isalnum</span><span class="p">()</span>  <span class="n">wheter</span> <span class="nb">all</span> <span class="n">letters</span> <span class="ow">and</span> <span class="n">nums</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">isdecimal</span><span class="p">()</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">isspace</span><span class="p">()</span> <span class="p">[</span><span class="n">spaces</span><span class="p">,</span><span class="n">tabs</span> <span class="ow">and</span> <span class="n">newlines</span><span class="p">]</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">istitle</span><span class="p">()</span> <span class="p">[</span><span class="n">Title</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;hello&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;hello123&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="kc">False</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;hello123&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;hello&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;123&#39;</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;This Is Title Case&#39;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;This Is Title Case 123&#39;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="kc">True</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;This Is not Title Case&#39;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="kc">False</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;This Is NOT Title Case Either&#39;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="kc">False</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter your age:&#39;</span><span class="p">)</span> 
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">if</span> <span class="n">age</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">():</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">break</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Please enter a number for your age.&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select a new password (letters and numbers only):&#39;</span><span class="p">)</span> 
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="k">if</span> <span class="n">password</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="k">break</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passwords can only have letters and numbers.&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>the .startwith() and endwith() method</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span> <span class="kc">True</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;world!&#39;</span><span class="p">)</span> <span class="kc">True</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;abc123&#39;</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;abcdef&#39;</span><span class="p">)</span> <span class="kc">False</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;abc123&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span> <span class="kc">False</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span> <span class="kc">True</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>the .join() and split() methods</strong>:</p>
+<ul>
+<li>
+<p>join called on lists and return strings</p>
+</li>
+<li>
+<p>split called on strings and return lists</p>
+</li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>the words used as a sign to split will not saved to lists</p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;rats&#39;</span><span class="p">,</span> <span class="s1">&#39;bats&#39;</span><span class="p">])</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s1">&#39;cats, rats, bats&#39;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;My&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;Simon&#39;</span><span class="p">])</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a> <span class="s1">&#39;My name is Simon&#39;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;ABC&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;My&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;Simon&#39;</span><span class="p">])</span> <span class="s1">&#39;MyABCnameABCisABCSimon&#39;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;My name is Simon&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a> <span class="p">[</span><span class="s1">&#39;My&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;Simon&#39;</span><span class="p">]</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a> <span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;MyABCnameABCisABCSimon&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span> 
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a> <span class="p">[</span><span class="s1">&#39;My&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;Simon&#39;</span><span class="p">]</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;My name is Simon&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">[</span><span class="s1">&#39;My na&#39;</span><span class="p">,</span> <span class="s1">&#39;e is Si&#39;</span><span class="p">,</span> <span class="s1">&#39;on&#39;</span><span class="p">]</span>
+</code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>a common use for split() is to split multiline strings</p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">spam</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Dear Alice,</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="s1">How have you been? I am fine. There is a container in the fridge that is labeled &quot;Milk Experiment.&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="s1">Please do not drink it.</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="s1">Sincerely,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="s1">Bob&#39;&#39;&#39;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">spam</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">[</span><span class="s1">&#39;Dear Alice,&#39;</span><span class="p">,</span> <span class="s1">&#39;How have you been? I am fine.&#39;</span><span class="p">,</span> <span class="s1">&#39;There is a container in the fridge&#39;</span><span class="p">,</span> <span class="s1">&#39;that is labeled &quot;Milk Experiment.&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Please do not drink it.&#39;</span><span class="p">,</span> <span class="s1">&#39;Sincerely,&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>split with .partition() method</strong>: 一分为三</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>this will keep the split word and only split once.
+if no split word found, return whole string and two '' '' </p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> 
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;orld!&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> 
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;XYZ&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a> <span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>use this to assign value</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">before</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">after</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> 
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">before</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="s1">&#39;Hello,&#39;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">after</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="s1">&#39;world!&#39;</span>
+</code></pre></div>
 
 
 
