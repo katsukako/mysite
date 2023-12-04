@@ -2,6 +2,8 @@
 
 > 其他需要学习的内容：操作系统，软件工程基础，linux，计算机网络基本知识，shell程序设计等等 [csdiy](https://csdiy.wiki/)
 
+> 
+
 ## 实用技巧
 
 ???+ f-string
@@ -205,7 +207,7 @@ OverflowError：算术运算的结果太大而无法表示时引发。
 
 * slice list_name[0:4]  (从零到三，4不包括) function[:]
 
-* len（list_name）
+* len(list_name)
 
 * del list_name[2]
 
@@ -336,7 +338,7 @@ copy.deepcopy() # 如果原表内包含lists
 
 * data deleted after running. ch.9 to learn how to save data
 
-* method: keys() value() items()  tuple value can be used in for loops
+* method: .keys() .value() .items()  tuple value can be used in for loops
 
 ???+ type
     上述method返回的值是dict_key类型的类表
@@ -354,6 +356,201 @@ copy.deepcopy() # 如果原表内包含lists
 
 * setdefault(key, default value) 
 
+!!! warning
+    spam.setdefault('color', 'black')
+    这行代码的作用是：检查字典 spam 中是否有 'color' 这个键，如果没有，则将 'color' 键的值设置为 'black'。如果 'color' 已经存在于 spam 中，则 setdefault() 不做任何改变，并保留原来的值。
+
 * import pprint   pprint() pformat()
 
 ### data structure
+
+* 基本上就是建模 画流程图分析 把实际问题转化为数学模型选择合适的数据结构去解决
+
+### nested dictionaries and lists
+
+* to contain ordered series of value
+
+???+ note 
+        def totalBrought(guests, item): numBrought = 0
+            for k, v in guests.items():
+            numBrought = numBrought + v.get(item, 0)
+            return numBrought 
+
+        使用 .items() 可以遍历字典的键和值。
+        使用 .get() 可以安全地访问字典中的特定键的值，并在该键不存在时返回一个默认值。 
+
+## ６manipulating strings
+
+## string literals
+
+* " "   ''  "" if ' is included
+
+**escape characters** ：\ 
+
+`spam = 'Say hi to Bob\'s mother.'`
+
+???+ example
+    \'
+    \"
+    \t
+    \n
+    \\
+
+**raw string** :r    对打印路径很实用
+
+`>>> print(r'That is Carol\'s cat.') That is Carol\'s cat.`
+
+**triple quotes**：``` multiline ```
+
+**multiline comments**: """ """
+
+**indexing and slicing strings**: spam[7:]  spam[:5]
+
+**string interpolation** : /%s
+
+`'My name is %s. I am %s years old.' % (name, age)`
+
+**f-strings**: {parameter}
+
+`f'My name is {name}. Next year I will be {age + 1}.'`
+
+**string method**: return new string value
+
+```python
+to handle input problems:
+method:
+    stringName.upper()
+    .lower()
+    .isupper()
+    .islower()
+    
+
+print('How are you?')
+feeling = input()
+if feeling.lower() == 'great':
+    print('I feel great too.') 
+else:
+    print('I hope the rest of your day is good.')
+
+'HELLO'.lower().islower()
+True
+```
+
+**the isX() methods**: helpful to valid users's input
+
+```python
+isalpha()  whether only letters
+isalnum()  wheter all letters and nums
+isdecimal()
+isspace() [spaces,tabs and newlines]
+istitle() [Title]
+```
+
+```python
+>>> 'hello'.isalpha() True
+>>> 'hello123'.isalpha() False
+>>> 'hello123'.isalnum() True
+>>> 'hello'.isalnum() True
+>>> '123'.isdecimal() True
+>>> ' '.isspace() True
+>>> 'This Is Title Case'.istitle() True
+>>> 'This Is Title Case 123'.istitle() True
+>>> 'This Is not Title Case'.istitle()
+False
+>>> 'This Is NOT Title Case Either'.istitle() False
+```
+
+```python
+while True:
+    print('Enter your age:') 
+    age = input()
+    if age.isdecimal():
+        break
+    print('Please enter a number for your age.')
+while True:
+    print('Select a new password (letters and numbers only):') 
+    password = input()
+    if password.isalnum():
+        break
+    print('Passwords can only have letters and numbers.')
+```
+
+**the .startwith() and endwith() method**:
+
+```python
+>>> 'Hello, world!'.startswith('Hello') True
+>>> 'Hello, world!'.endswith('world!') True
+>>> 'abc123'.startswith('abcdef') False
+>>> 'abc123'.endswith('12') False
+>>> 'Hello, world!'.startswith('Hello, world!') True
+>>> 'Hello, world!'.endswith('Hello, world!') True
+```
+
+**the .join() and split() methods**:
+
+* join called on lists and return strings
+
+* split called on strings and return lists
+
+???+ warning
+    the words used as a sign to split will not saved to lists
+
+```python
+>>> ', '.join(['cats', 'rats', 'bats'])
+'cats, rats, bats'
+>>> ' '.join(['My', 'name', 'is', 'Simon'])
+ 'My name is Simon'
+>>> 'ABC'.join(['My', 'name', 'is', 'Simon']) 'MyABCnameABCisABCSimon'
+
+>>> 'My name is Simon'.split()
+ ['My', 'name', 'is', 'Simon']
+
+ >>> 'MyABCnameABCisABCSimon'.split('ABC') 
+ ['My', 'name', 'is', 'Simon']
+>>> 'My name is Simon'.split('m')
+['My na', 'e is Si', 'on']
+```
+
+???+ note
+    a common use for split() is to split multiline strings
+
+```python
+>>> spam = '''Dear Alice,
+How have you been? I am fine. There is a container in the fridge that is labeled "Milk Experiment."
+Please do not drink it.
+Sincerely,
+Bob'''
+>>> spam.split('\n')
+['Dear Alice,', 'How have you been? I am fine.', 'There is a container in the fridge', 'that is labeled "Milk Experiment."', '', 'Please do not drink it.', 'Sincerely,', 'Bob']
+```
+
+**split with .partition() method**: 一分为三
+
+???+ warning 
+    this will keep the split word and only split once.
+    if no split word found, return whole string and two '' '' 
+
+```python
+>>> 'Hello, world!'.partition('w') 
+('Hello, ', 'w', 'orld!')
+>>> 'Hello, world!'.partition('world') 
+('Hello, ', 'world', '!')
+```
+
+```python
+>>> 'Hello, world!'.partition('XYZ')
+ ('Hello, world!', '', '')
+```
+
+**use this to assign value**
+
+```python
+>>> before, sep, after = 'Hello, world!'.partition(' ') 
+>>> before
+'Hello,'
+>>> after
+'world!'
+```
+
+
+
