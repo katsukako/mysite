@@ -552,5 +552,39 @@ Bob'''
 'world!'
 ```
 
+**自动对齐**: .rjust(num,'fuhao') .ljust() .center()
+
+???+ note
+    rjust意味着把之前的文字放在右边
+
+**去除空格**:.strip('') .rstrip() .lstrip()
+
+```python
+>>> spam = 'SpamSpamBaconSpamEggsSpamSpam' 
+>>> spam.strip('ampS')
+'BaconSpamEggs'
+```
+!!! warning 
+    order doesnot matter
+
+
+**ascii转化**: ord('A') chr(65) 
+
+[moreaboutunicode](https://www.youtube.com/watch?v=sgHbC6udIqc)
+
+**pyperclip module**: pyperclip.copy() .paste()  send and receive
+
+???+ note
+    pyperclip可以获取剪贴板内容
+
+**sys.argv**:获取命令行参数 0总是脚本名字
+
+???+ warning 
+    sudo chmod +x fileName 赋予文件权限
+    命令行参数需要打在命令行里
+
+
+
+
 
 
