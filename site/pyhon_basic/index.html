@@ -2450,6 +2450,33 @@ if no split word found, return whole string and two '' '' </p>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">after</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="s1">&#39;world!&#39;</span>
 </code></pre></div>
+<p><strong>自动对齐</strong>: .rjust(num,'fuhao') .ljust() .center()</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>rjust意味着把之前的文字放在右边</p>
+</details>
+<p><strong>去除空格</strong>:.strip('') .rstrip() .lstrip()</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">spam</span> <span class="o">=</span> <span class="s1">&#39;SpamSpamBaconSpamEggsSpamSpam&#39;</span> 
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">spam</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;ampS&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="s1">&#39;BaconSpamEggs&#39;</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>order doesnot matter</p>
+</div>
+<p><strong>ascii转化</strong>: ord('A') chr(65) </p>
+<p><a href="https://www.youtube.com/watch?v=sgHbC6udIqc">moreaboutunicode</a></p>
+<p><strong>pyperclip module</strong>: pyperclip.copy() .paste()  send and receive</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>pyperclip可以获取剪贴板内容</p>
+</details>
+<p><strong>sys.argv</strong>:获取命令行参数 0总是脚本名字</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>sudo chmod +x fileName 赋予文件权限
+命令行参数需要打在命令行里</p>
+</details>
 
 
 
