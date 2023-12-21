@@ -4,6 +4,56 @@
 
 > [pythonBasic](https://github.com/jackfrued/Python-Core-50-Courses/blob/master/%E7%AC%AC10%E8%AF%BE%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
 
+## class开始的知识点
+
+class 知识点
+
+- 概念和语法 类 对象 属性 方法 父类 子类 封装 继承 多态
+  
+- 类间关系 继承 关联 依赖
+  
+- 创建枚举类
+  
+- 运算符重载__lt__ <
+  
+- 抽象类 ABCMeta, abstractmethod 创建抽象类的抽象的方法
+  
+
+- type（）与isinstance（）
+  
+- 子类批量赋值和操作 使用list等
+  
+
+## python标准库初探
+
+- base64
+- collections里面有什么
+- hashlib
+- itertools
+- random
+- os.path open ---操作文件
+- uuid
+- dealing error 处理异常
+- 上下文语法
+- heapq
+
+### 文件读写
+
+- open r w a
+- 读写二进制文件
+
+### 对象的序列化和反序列化
+
+- JSON
+- python的json模块 4个主要函数
+- ujson库
+
+#### 网络API
+
+- 数据格式
+- requests三方库
+
+
 ## 实用技巧
 
 ???+ f-string

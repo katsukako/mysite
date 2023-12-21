@@ -82,7 +82,7 @@
 
 `git remote -v`
 
-起别名：
+起别名并关联远程仓库：
 
 `git remote add nickname remote_address`
 
