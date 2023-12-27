@@ -44,9 +44,14 @@
 
 `git commmit -m"日志信息"文件名`
 
+
 查看历史记录：
 
 `git reflog`
+
+`git log`
+
+`git show <hash commit>`
 
 版本穿梭：
 
